@@ -12,6 +12,11 @@
 		BB32F49B259F47980006A2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB32F49A259F47980006A2A6 /* Assets.xcassets */; };
 		BB32F49E259F47980006A2A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB32F49D259F47980006A2A6 /* Preview Assets.xcassets */; };
 		BB32F4A1259F47980006A2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB32F49F259F47980006A2A6 /* Main.storyboard */; };
+		BB32F4AE259F5CE10006A2A6 /* StatsPoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4AD259F5CE10006A2A6 /* StatsPoller.swift */; };
+		BB32F4B1259F71300006A2A6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4B0259F71300006A2A6 /* SettingsView.swift */; };
+		BB32F4B4259F715E0006A2A6 /* MonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4B3259F715E0006A2A6 /* MonitorView.swift */; };
+		BB32F4BF259F804C0006A2A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4BE259F804B0006A2A6 /* Constants.swift */; };
+		BB32F4C2259FC7F00006A2A6 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		BB32F4A0259F47980006A2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BB32F4A2259F47980006A2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB32F4A3259F47980006A2A6 /* OctoBar.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctoBar.entitlements; sourceTree = "<group>"; };
+		BB32F4AD259F5CE10006A2A6 /* StatsPoller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatsPoller.swift; sourceTree = "<group>"; };
+		BB32F4B0259F71300006A2A6 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; usesTabs = 0; };
+		BB32F4B3259F715E0006A2A6 /* MonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorView.swift; sourceTree = "<group>"; };
+		BB32F4BE259F804B0006A2A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,12 +66,14 @@
 			isa = PBXGroup;
 			children = (
 				BB32F496259F478F0006A2A6 /* AppDelegate.swift */,
-				BB32F498259F478F0006A2A6 /* ContentView.swift */,
 				BB32F49A259F47980006A2A6 /* Assets.xcassets */,
 				BB32F49F259F47980006A2A6 /* Main.storyboard */,
 				BB32F4A2259F47980006A2A6 /* Info.plist */,
 				BB32F4A3259F47980006A2A6 /* OctoBar.entitlements */,
 				BB32F49C259F47980006A2A6 /* Preview Content */,
+				BB32F4B8259F72250006A2A6 /* Views */,
+				BB32F4BE259F804B0006A2A6 /* Constants.swift */,
+				BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */,
 			);
 			path = OctoBar;
 			sourceTree = "<group>";
@@ -72,6 +84,17 @@
 				BB32F49D259F47980006A2A6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BB32F4B8259F72250006A2A6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BB32F498259F478F0006A2A6 /* ContentView.swift */,
+				BB32F4AD259F5CE10006A2A6 /* StatsPoller.swift */,
+				BB32F4B0259F71300006A2A6 /* SettingsView.swift */,
+				BB32F4B3259F715E0006A2A6 /* MonitorView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,8 +167,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB32F4B1259F71300006A2A6 /* SettingsView.swift in Sources */,
+				BB32F4B4259F715E0006A2A6 /* MonitorView.swift in Sources */,
 				BB32F499259F478F0006A2A6 /* ContentView.swift in Sources */,
 				BB32F497259F478F0006A2A6 /* AppDelegate.swift in Sources */,
+				BB32F4AE259F5CE10006A2A6 /* StatsPoller.swift in Sources */,
+				BB32F4C2259FC7F00006A2A6 /* NotificationExtension.swift in Sources */,
+				BB32F4BF259F804C0006A2A6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
