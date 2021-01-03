@@ -35,16 +35,18 @@ struct SettingsView: View {
 
             }.padding()
             
-            Button("Save") {
-                saveSettings()
-            }
-            
-            
-            Spacer()
-            
-            Button("Quit") {
-                exit(0)
+            HStack {
+                Button("Save") {
+                    saveSettings()
+                }
+                .buttonStyle(OctoBarButtonStyle(color: .green))
+                Spacer()
+                Button("Quit") {
+                    exit(0)
+                }
+                .buttonStyle(OctoBarButtonStyle(color: .red))
             }.padding()
+            
         }
     }
     

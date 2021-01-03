@@ -18,7 +18,7 @@ struct ContentView: View {
         let api = UserDefaults.standard.string(forKey: Constants.SETTIMG_API_KEY) ?? ""
         
         if (ip == "" || api == "") {
-            _selection = State<Int>.init(initialValue:2)
+            _selection = State<Int>.init(initialValue:3)
         }
     }
     
@@ -32,11 +32,17 @@ struct ContentView: View {
                 }
                 .tag(1)
             
+            ControlView()
+                .tabItem {
+                    Text("Control")
+                }
+                .tag(2)
+            
             SettingsView()
                 .tabItem() {
                     Text("Settings")
                 }
-                .tag(2)
+                .tag(3)
         }.padding()
     
     }

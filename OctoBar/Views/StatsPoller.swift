@@ -15,6 +15,11 @@ class StatsPoller: ObservableObject {
     @Published var state = ""
     @Published var stateMessage = ""
     @Published var file = ""
+    @Published var printTime = 0
+    @Published var printTimeLeft = 0
+    @Published var printTimeDisplay = ""
+    @Published var printTimeLeftDisplay = ""
+    
     
     
     var ip : String?
@@ -69,6 +74,8 @@ class StatsPoller: ObservableObject {
                         var stateMessage = ""
                         var completion = 0.0
                         var filename = ""
+                        var printTime = 0
+                        var printTimeLeft = 0
                                                                         
                         let stateFull = responseJSON["state"] as? String ?? "Unknown"
                         let halves = stateFull.split(separator: " ",maxSplits: 1)
@@ -79,12 +86,9 @@ class StatsPoller: ObservableObject {
                                                 
                         
                         if let progress = responseJSON["progress"] as? [String: Any]  {
-                        
-                            if let completionFloat = progress["completion"] as? Double {
-                                completion = completionFloat
-                            } else {
-                                completion = 0
-                            }
+                            completion = progress["completion"] as? Double ?? 0.0
+                            printTime =  progress["printTime"] as? Int ?? 0
+                            printTimeLeft =  progress["printTimeLeft"] as? Int ?? 0
                         }
                         
                         if let job = responseJSON["job"] as? [String: Any]  {
@@ -97,15 +101,30 @@ class StatsPoller: ObservableObject {
                             filename = "None"
                         }
                         
+                        let printTimeDuration: TimeInterval  = Double(printTime)
+                        let printTimeLeftDuration: TimeInterval = Double(printTimeLeft)
+                        
+                        let formatter = DateComponentsFormatter()
+                        formatter.unitsStyle = .brief
+                        formatter.allowedUnits = [.hour, .minute]
+                        formatter.zeroFormattingBehavior = [.dropLeading]
                         
                         DispatchQueue.main.async {
                             self.complete = completion
                             self.state = state
                             self.stateMessage = stateMessage
                             self.file = filename
+                            self.printTime = printTime
+                            self.printTimeLeft = printTimeLeft
+                            self.printTimeDisplay = formatter.string(from: printTimeDuration) ?? "NA"
+                            self.printTimeLeftDisplay = formatter.string(from: printTimeLeftDuration) ?? "NA"
                         }
                         
-                        NotificationCenter.default.post(name: .didReceiveCompletion, object: completion)
+                        let printerState = PrinterState()
+                        printerState.complete = completion
+                        printerState.state = state
+                        
+                        NotificationCenter.default.post(name: .didReceiveCompletion, object: printerState)
                         
                     }
             }            

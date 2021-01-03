@@ -17,6 +17,9 @@
 		BB32F4B4259F715E0006A2A6 /* MonitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4B3259F715E0006A2A6 /* MonitorView.swift */; };
 		BB32F4BF259F804C0006A2A6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4BE259F804B0006A2A6 /* Constants.swift */; };
 		BB32F4C2259FC7F00006A2A6 /* NotificationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */; };
+		BB32F4CA25A144DE0006A2A6 /* OctoBarButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4C925A144DE0006A2A6 /* OctoBarButtonStyle.swift */; };
+		BB32F4CD25A1FBB10006A2A6 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4CC25A1FBB10006A2A6 /* ControlView.swift */; };
+		BB32F4D025A200A70006A2A6 /* PrinterState.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB32F4CF25A200A70006A2A6 /* PrinterState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +36,9 @@
 		BB32F4B3259F715E0006A2A6 /* MonitorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitorView.swift; sourceTree = "<group>"; };
 		BB32F4BE259F804B0006A2A6 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationExtension.swift; sourceTree = "<group>"; };
+		BB32F4C925A144DE0006A2A6 /* OctoBarButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctoBarButtonStyle.swift; sourceTree = "<group>"; };
+		BB32F4CC25A1FBB10006A2A6 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		BB32F4CF25A200A70006A2A6 /* PrinterState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrinterState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 				BB32F4B8259F72250006A2A6 /* Views */,
 				BB32F4BE259F804B0006A2A6 /* Constants.swift */,
 				BB32F4C1259FC7F00006A2A6 /* NotificationExtension.swift */,
+				BB32F4CF25A200A70006A2A6 /* PrinterState.swift */,
 			);
 			path = OctoBar;
 			sourceTree = "<group>";
@@ -93,6 +100,8 @@
 				BB32F4AD259F5CE10006A2A6 /* StatsPoller.swift */,
 				BB32F4B0259F71300006A2A6 /* SettingsView.swift */,
 				BB32F4B3259F715E0006A2A6 /* MonitorView.swift */,
+				BB32F4C925A144DE0006A2A6 /* OctoBarButtonStyle.swift */,
+				BB32F4CC25A1FBB10006A2A6 /* ControlView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,10 +178,13 @@
 			files = (
 				BB32F4B1259F71300006A2A6 /* SettingsView.swift in Sources */,
 				BB32F4B4259F715E0006A2A6 /* MonitorView.swift in Sources */,
+				BB32F4CA25A144DE0006A2A6 /* OctoBarButtonStyle.swift in Sources */,
 				BB32F499259F478F0006A2A6 /* ContentView.swift in Sources */,
 				BB32F497259F478F0006A2A6 /* AppDelegate.swift in Sources */,
 				BB32F4AE259F5CE10006A2A6 /* StatsPoller.swift in Sources */,
+				BB32F4D025A200A70006A2A6 /* PrinterState.swift in Sources */,
 				BB32F4C2259FC7F00006A2A6 /* NotificationExtension.swift in Sources */,
+				BB32F4CD25A1FBB10006A2A6 /* ControlView.swift in Sources */,
 				BB32F4BF259F804C0006A2A6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,10 +324,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OctoBar/OctoBar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"OctoBar/Preview Content\"";
-				DEVELOPMENT_TEAM = ZU2785H698;
+				DEVELOPMENT_TEAM = B4SPMA3MTR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OctoBar/Info.plist;
@@ -336,10 +349,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = OctoBar/OctoBar.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"OctoBar/Preview Content\"";
-				DEVELOPMENT_TEAM = ZU2785H698;
+				DEVELOPMENT_TEAM = B4SPMA3MTR;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = OctoBar/Info.plist;
